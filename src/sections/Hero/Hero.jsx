@@ -43,8 +43,7 @@ function Hero() {
                 </a>
             </span>
             <p className={styles.description}>
-                I'm a software developer with a passion for creating meaningful and impactful projects. 
-                I'm always looking for new opportunities to learn and grow.
+            I love creating projects that challenge me. Always eager to learn and grow, I'm excited about for opportunities!
             </p>
             <a href={CV} download>
                 <button className="hover">
