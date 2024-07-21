@@ -9,7 +9,7 @@ import more from '../../assets/more.png'
 
 function Projects() {
   return <section id="projects" className={styles.container}>
-    <h1 className="sectionTitle">Projects</h1>
+    <h1 className="sectionTitle">My Projects</h1>
     <div className={styles.projectsContainer}>
         <ProjectsCard 
             src={Todo} 

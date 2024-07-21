@@ -7,7 +7,7 @@ import githubIconDark from '../../assets/github-dark.svg'
 import linkedInIconDark from '../../assets/linkedin-dark.svg'
 import githubIconLight from '../../assets/github-light.svg' 
 import CV from '../../assets/cv.pdf'
-import { useTheme } from '../../common/themeContext.jsx'  
+import { useTheme } from '../../common/ThemeContext.jsx'  
 
 function Hero() {
     const {theme, toggleTheme} = useTheme();
@@ -43,7 +43,7 @@ function Hero() {
                 </a>
             </span>
             <p className={styles.description}>
-            I love creating projects that challenge me. Always eager to learn and grow, I'm excited about for opportunities!
+            I love creating projects that challenge me. Always eager to learn and grow, I'm excited for new and meaningful opportunities!
             </p>
             <a href={CV} download>
                 <button className="hover">
