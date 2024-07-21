@@ -17,7 +17,7 @@ function Hero() {
     const linkedInIcon = theme === 'light' ? linkedInIconLight : linkedInIconDark
 
     return (
-    <section id = "hero">
+    <section id = "hero" className={styles.container}>
         <div className={styles.colorModeContainer}>
             <img 
                 className={styles.Hero} 
@@ -42,7 +42,7 @@ function Hero() {
                     <img src={githubIcon} alt="GitHub Icon" />
                 </a>
             </span>
-            <p>
+            <p className={styles.description}>
                 I'm a software developer with a passion for creating meaningful and impactful projects. 
                 I'm always looking for new opportunities to learn and grow.
             </p>
