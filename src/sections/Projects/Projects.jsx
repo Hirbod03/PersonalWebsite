@@ -43,7 +43,7 @@ function Projects() {
         />
         <ProjectsCard 
             src={more} 
-            link="https://github.com/Hirbod03s" 
+            link="https://github.com/Hirbod03" 
             h3="Looking for more?" 
             p="Visit my GitHub!"
         />
