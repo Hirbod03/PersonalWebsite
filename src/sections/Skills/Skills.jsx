@@ -33,7 +33,7 @@ function Skills() {
         <SkillList src={checkMarkIcon} skill="Confluence" />
         <SkillList src={checkMarkIcon} skill="Git" />
         <SkillList src={checkMarkIcon} skill="Unix/Linux" />
-        <SkillList src={checkMarkIcon} skill="Visual Studio / Visual Studio Code" />
+        <SkillList src={checkMarkIcon} skill="Visual Studio" />
       </div>
     </section>
   );
