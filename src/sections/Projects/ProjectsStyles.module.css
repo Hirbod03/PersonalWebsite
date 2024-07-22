@@ -28,6 +28,7 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    min-width: 25ch;
   }
   
   @media (width >= 800px) {

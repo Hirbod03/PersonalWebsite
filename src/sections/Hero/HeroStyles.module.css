@@ -57,9 +57,9 @@
 
 .colorMode {
     position: absolute;
-    top: 15px;
-    right: 50px;
-    width: 25px;
+    top: 5px;
+    right: 15px;
+    width: 35px;
 }
 
 .colorMode:hover {
@@ -81,7 +81,7 @@
     .container {
         flex-direction: row-reverse;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
         
         .hero {
             max-width: 350px;

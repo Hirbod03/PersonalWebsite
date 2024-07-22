@@ -15,7 +15,7 @@ function Projects() {
             src={Todo} 
             link="https://github.com/Hirbod03/HeroSurfer" 
             h3="HeroSurfer" 
-            p="TO-DO List Chrome Extension"
+            p="Chrome Extension"
         />
         <ProjectsCard 
             src={insta} 
@@ -33,13 +33,13 @@ function Projects() {
             src={ms} 
             link="https://github.com/Hirbod03/MyMinesweeper" 
             h3="Minesweeper" 
-            p="Minesweeper Game"
+            p="Classic Game"
         />
         <ProjectsCard 
             src={ta} 
             link="https://github.com/Hirbod03/Projects/tree/main/Python/Tweet%20Sentiment%20Analysis" 
             h3="Sentiment Analysis" 
-            p="Happiness Analysis of Tweets"
+            p="Tweet analysis"
         />
         <ProjectsCard 
             src={more} 
