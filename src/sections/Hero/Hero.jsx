@@ -22,12 +22,12 @@ function Hero() {
             <img 
                 className={styles.Hero} 
                 src= {heroImg} 
-                alt="looking for something?"
+                alt="profile-image"
             />
             <img 
                 className = {styles.colorMode}
                 src ={themeIcon} 
-                alt="hmm, light or dark mode?"
+                alt="light/dark-mode-selector"
                 onClick={toggleTheme}
             />
         </div> 
