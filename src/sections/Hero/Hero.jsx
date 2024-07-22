@@ -43,7 +43,7 @@ function Hero() {
                 </a>
             </span>
             <p className={styles.description}>
-            I love creating projects that challenge me. Always eager to learn and grow, I'm excited for new and meaningful opportunities!
+            Experienced in developing various software using Java, Python and SQL. Looking for new opportunities and challenges.
             </p>
             <a href={CV} download>
                 <button className="hover">

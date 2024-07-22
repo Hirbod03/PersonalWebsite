@@ -5,7 +5,7 @@
     text-align: center;
     gap: 20px;
     min-height: 100dvh;
-    padding: 30px 30px;
+    padding: 0 15px;
 
     .hero {
         max-width: 200px;
@@ -58,7 +58,6 @@
 
 .colorMode {
     position: absolute;
-    top: 5px;
     right: 65px;
     width: 25px;
 }
