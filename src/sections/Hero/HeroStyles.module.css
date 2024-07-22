@@ -5,10 +5,13 @@
     text-align: center;
     gap: 20px;
     min-height: 100dvh;
-    padding: 0 15px;
+    padding: 3px 15px;
 
     .hero {
         max-width: 200px;
+        margin: 0 auto;
+        height: auto;
+        width: auto;
     }
 
     span {
@@ -75,6 +78,15 @@
     display: flex;
     flex-direction: column;
     gap: 20px; 
+}
+
+/* Assuming your CSS file has a similar structure */
+@media (max-width: 768px) {
+    .Hero {
+        margin: 0 auto; /* Centers the image horizontally */
+        width: 90%; /* Adjust the width as needed to fit your design */
+        height: auto; /* Keeps the image aspect ratio intact */
+    }
 }
 
 @media (width >= 800px) {
