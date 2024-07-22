@@ -27,7 +27,7 @@ function Projects() {
             src={db} 
             link="https://github.com/Hirbod03/TAMDB" 
             h3="TA Manager" 
-            p="SQL Database for managing teacher assistants"
+            p="SQL Database"
         />
         <ProjectsCard 
             src={ms} 
@@ -38,7 +38,7 @@ function Projects() {
         <ProjectsCard 
             src={ta} 
             link="https://github.com/Hirbod03/Projects/tree/main/Python/Tweet%20Sentiment%20Analysis" 
-            h3="Tweet Sentiment Analysis" 
+            h3="Sentiment Analysis" 
             p="Happiness Analysis of Tweets"
         />
         <ProjectsCard 
