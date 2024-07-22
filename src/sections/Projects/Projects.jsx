@@ -21,7 +21,7 @@ function Projects() {
             src={insta} 
             link="https://github.com/Hirbod03/AutoInstaUnfollow" 
             h3="AutoInstaUnfollow" 
-            p="Instagram Unfollower Tool"
+            p="Instagram Tool"
         />
         <ProjectsCard 
             src={db} 
