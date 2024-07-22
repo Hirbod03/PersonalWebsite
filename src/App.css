@@ -18,6 +18,11 @@
     --footer-text-color: #bbb;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--background-color);
     display: flex;
@@ -65,6 +70,12 @@ h1 {
 
 .hover {
     cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 10px;
+    }
 }
 
 @media (width >= 800px) {
