@@ -43,7 +43,7 @@ function Hero() {
                 </a>
             </span>
             <p className={styles.description}>
-            Experienced in developing various software using Java, Python and SQL. Looking for new opportunities and challenges.
+            Experienced software developer proficient in Java, Python, and SQL. Seeking new challenges to leverage my skills and drive innovation.
             </p>
             <a href={CV} download>
                 <button className="hover">
