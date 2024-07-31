@@ -17,42 +17,43 @@ function Hero() {
     const linkedInIcon = theme === 'light' ? linkedInIconLight : linkedInIconDark
 
     return (
-    <section id = "hero" className={styles.container}>
-        <div className={styles.colorModeContainer}>
-            <img 
-                className={styles.hero} 
-                src= {heroImg} 
-                alt="profile-image"
-            />
-            <img 
-                className = {styles.colorMode}
-                src ={themeIcon} 
-                alt="light/dark-mode-selector"
-                onClick={toggleTheme}
-            />
-        </div> 
-        <div className={styles.info}>
-            <h1>Hirbod<br/>Hosseini</h1>
-            <h2>Software Developer</h2>
-            <span>
-                <a href="https://www.linkedin.com/in/hirbod03/" target="_blank">
-                    <img src={linkedInIcon} alt="LinkedIn Icon" />
+    <div className={`${styles.container} heroSection`}>
+        <section id = "hero" className={styles.container}>
+            <div className={styles.colorModeContainer}>
+                <img 
+                    className={styles.hero} 
+                    src= {heroImg} 
+                    alt="profile-image"
+                />
+                <img 
+                    className = {styles.colorMode}
+                    src ={themeIcon} 
+                    alt="light/dark-mode-selector"
+                    onClick={toggleTheme}
+                />
+            </div> 
+            <div className={styles.info}>
+                <h1>Hirbod<br/>Hosseini</h1>
+                <h2>Software Developer</h2>
+                <span>
+                    <a href="https://www.linkedin.com/in/hirbod03/" target="_blank">
+                        <img src={linkedInIcon} alt="LinkedIn Icon" />
+                    </a>
+                    <a href="https://github.com/Hirbod03" target="_blank">
+                        <img src={githubIcon} alt="GitHub Icon" />
+                    </a>
+                </span>
+                <p className={styles.description}>
+                Experienced software developer proficient in Java, Python, and SQL. Seeking new challenges to leverage my skills and drive innovation.
+                </p>
+                <a href={CV} download>
+                    <button className="hover">
+                        Resume
+                    </button>
                 </a>
-                <a href="https://github.com/Hirbod03" target="_blank">
-                    <img src={githubIcon} alt="GitHub Icon" />
-                </a>
-            </span>
-            <p className={styles.description}>
-            Experienced software developer proficient in Java, Python, and SQL. Seeking new challenges to leverage my skills and drive innovation.
-            </p>
-            <a href={CV} download>
-                <button className="hover">
-                    Resume
-                </button>
-            </a>
-        </div>
-    </section>
-    )
+            </div>
+        </section>
+    </div>)
 }
 
 export default Hero

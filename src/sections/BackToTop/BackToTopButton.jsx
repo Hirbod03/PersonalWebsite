@@ -1,19 +1,24 @@
-import React, { useEffect } from 'react';
-import styles from "./BackButtonStyles.module.css";
+import React, { useState, useEffect } from 'react';
+import styles from './BackButtonStyles.module.css';
 
-function BackToTopButton() {
+const BackToTopButton = () => {
+    const [showButton, setShowButton] = useState(false);
+
     useEffect(() => {
         const handleScroll = () => {
-            const backToTopButton = document.getElementById('back-to-top');
-            if (window.scrollY > 100) {
-                backToTopButton.style.display = 'block';
+            const heroSectionHeight = document.querySelector('.heroSection').offsetHeight;
+            if (window.scrollY > heroSectionHeight) {
+                setShowButton(true);
             } else {
-                backToTopButton.style.display = 'none';
+                setShowButton(false);
             }
         };
 
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     const scrollToTop = () => {
@@ -24,10 +29,13 @@ function BackToTopButton() {
     };
 
     return (
-        <button className={styles['back-to-top']} onClick={scrollToTop}>
+        <button
+            className={`${styles['back-to-top']} ${showButton ? styles.show : ''}`}
+            onClick={scrollToTop}
+        >
             ↑
         </button>
     );
-}
+};
 
 export default BackToTopButton;
