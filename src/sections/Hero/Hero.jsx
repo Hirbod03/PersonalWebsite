@@ -2,10 +2,12 @@ import styles from './HeroStyles.module.css'
 import heroImg from '../../assets/hero-img.png'
 import sun from '../../assets/sun.svg'
 import moon from '../../assets/moon.png'
-import linkedInIconLight from '../../assets/linkedin-light.svg'
+import linkedinIconLight from '../../assets/linkedin-light.svg'
 import githubIconDark from '../../assets/github-dark.svg'
-import linkedInIconDark from '../../assets/linkedin-dark.svg'
+import linkedinIconDark from '../../assets/linkedin-dark.svg'
 import githubIconLight from '../../assets/github-light.svg' 
+import leetcodeIconLight from '../../assets/leetcode-light.png'
+import leetcodeIconDark from '../../assets/leetcode-dark.png'
 import CV from '../../assets/cv.pdf'
 import { useTheme } from '../../common/ThemeContext.jsx'  
 
@@ -14,7 +16,8 @@ function Hero() {
 
     const themeIcon = theme === 'light' ? sun : moon
     const githubIcon = theme === 'light' ? githubIconLight : githubIconDark
-    const linkedInIcon = theme === 'light' ? linkedInIconLight : linkedInIconDark
+    const linkedinIcon = theme === 'light' ? linkedinIconLight : linkedinIconDark
+    const leetcodeIcon = theme == 'light' ? leetcodeIconLight : leetcodeIconDark
 
     return (
     <div className={`${styles.container} heroSection`}>
@@ -37,10 +40,13 @@ function Hero() {
                 <h2>Software Developer</h2>
                 <span>
                     <a href="https://www.linkedin.com/in/hirbod03/" target="_blank">
-                        <img src={linkedInIcon} alt="LinkedIn Icon" />
+                        <img src={linkedinIcon} alt="LinkedIn-Icon" />
                     </a>
                     <a href="https://github.com/Hirbod03" target="_blank">
-                        <img src={githubIcon} alt="GitHub Icon" />
+                        <img src={githubIcon} alt="GitHub-Icon" />
+                    </a>
+                    <a href="https://leetcode.com/u/Hirbod/" target="_blank">
+                        <img src={leetcodeIcon} alt="LeetCode-Icon" />
                     </a>
                 </span>
                 <p className={styles.description}>
