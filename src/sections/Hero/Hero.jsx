@@ -45,9 +45,9 @@ function Hero() {
                     <a href="https://github.com/Hirbod03" target="_blank">
                         <img src={githubIcon} alt="GitHub-Icon" />
                     </a>
-                    <a href="https://leetcode.com/u/Hirbod/" target="_blank">
+                    {/* <a href="https://leetcode.com/u/Hirbod/" target="_blank">
                         <img src={leetcodeIcon} alt="LeetCode-Icon" />
-                    </a>
+                    </a> */}
                 </span>
                 <p className={styles.description}>
                 Experienced software developer proficient in Java, Python, and SQL. Seeking new challenges to leverage my skills and drive innovation.
