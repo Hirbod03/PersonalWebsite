@@ -58,6 +58,14 @@ p {
     margin: 0;
 }
 
+.employmentDetails {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color-secondary);
+    margin-top: 5px;
+}
+
 .responsibilities {
     text-align: left;
     margin-top: 10px;
@@ -78,6 +86,15 @@ a {
 }
 
 a:hover {
+    color: var(--link-hover-color);
+}
+
+.companyLink {
+    color: var(--link-color);
+    font-weight: bold;
+}
+
+.companyLink:hover {
     color: var(--link-hover-color);
 }
 
