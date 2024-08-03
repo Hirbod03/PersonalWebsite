@@ -10,8 +10,8 @@ function App() {
    return (
       <>
          <Hero />
-         <Skills />
          {/* <Experience /> */}
+         <Skills />
          <Projects />
          <Contact />
          <BackToTopButton /> 

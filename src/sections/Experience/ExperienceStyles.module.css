@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     gap: 30px;
     width: 100%;
     max-width: 800px;
@@ -34,7 +34,7 @@
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 350px;
+    max-width: 300px;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -62,7 +62,7 @@ p {
     font-family: 'Roboto Mono', monospace;
     font-size: 16px;
     font-weight: 400;
-    color: var(--text-color-secondary);
+    color: var(--text-color);
     margin-top: 5px;
 }
 
@@ -95,7 +95,7 @@ a:hover {
 }
 
 .companyLink:hover {
-    color: var(--link-hover-color);
+    color: blue;
 }
 
 @media (width >= 800px) {
@@ -105,9 +105,6 @@ a:hover {
         justify-content: space-evenly;
     }
 
-    .experienceCard {
-        max-width: 350px;
-    }
 }
 
 @media (width >= 1400px) {
