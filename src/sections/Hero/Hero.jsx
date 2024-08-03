@@ -50,7 +50,7 @@ function Hero() {
                     </a> */}
                 </span>
                 <p className={styles.description}>
-                Full-Stack Developer skilled in React, Node.js, Java and SQL.<br/>
+                Full-Stack Developer skilled in React, Node, Java and SQL.<br/>
                 Seeking new challenges to leverage my skills alongside experienced professionals.
                 </p>
                 <a href={CV} download>
