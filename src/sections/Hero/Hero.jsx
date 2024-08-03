@@ -50,7 +50,8 @@ function Hero() {
                     </a> */}
                 </span>
                 <p className={styles.description}>
-                Experienced software developer proficient in Java, Python, and SQL. Seeking new challenges to leverage my skills and drive innovation.
+                Full-Stack Developer skilled in React, Node.js, Java and SQL.<br/>
+                Seeking new challenges to leverage my skills alongside experienced professionals.
                 </p>
                 <a href={CV} download>
                     <button className="hover">
