@@ -1,0 +1,103 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.sectionTitle {
+    font-family: 'Rubik', sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.experienceList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.experienceCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: var(--experience-card-bg);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.experienceCard:hover {
+    transform: scale(1.02);
+}
+
+h3 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+p {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.responsibilities {
+    text-align: left;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.responsibilities li {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+@media (min-width: 768px) {
+    .experienceList {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .experienceCard {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 767px) {
+    .experienceCard {
+        padding: 10px;
+    }
+
+    .experienceList {
+        gap: 20px;
+    }
+}
