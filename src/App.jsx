@@ -11,7 +11,7 @@ function App() {
       <>
          <Hero />
          <Skills />
-         {/* <Experience /> */}
+         <Experience />
          <Projects />
          <Contact />
          <BackToTopButton /> 

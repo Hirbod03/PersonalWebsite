@@ -17,7 +17,8 @@
 .experienceList {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 30px;
     width: 100%;
     max-width: 800px;
@@ -33,7 +34,7 @@
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 600px;
+    max-width: 350px;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -80,7 +81,7 @@ a:hover {
     color: var(--link-hover-color);
 }
 
-@media (min-width: 768px) {
+@media (width >= 800px) {
     .experienceList {
         flex-direction: row;
         flex-wrap: wrap;
@@ -92,7 +93,7 @@ a:hover {
     }
 }
 
-@media (max-width: 767px) {
+@media (width >= 1400px) {
     .experienceCard {
         padding: 10px;
     }
