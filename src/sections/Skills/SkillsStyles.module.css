@@ -20,6 +20,7 @@
   justify-content: space-evenly;
   align-self: center;
   flex-wrap: wrap;
+  gap: 10px;
   row-gap: 40px;
   max-width: 26ch;
 }

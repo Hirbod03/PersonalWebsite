@@ -36,7 +36,6 @@
     width: 100%;
     max-width: 300px;
     transition: transform 0.3s ease-in-out;
-    cursor: pointer;
 }
 
 .experienceCard:hover {
