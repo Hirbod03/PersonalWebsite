@@ -34,7 +34,7 @@
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 300px;
+    max-width: 325px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -69,6 +69,7 @@ p {
     text-align: left;
     margin-top: 10px;
     padding-left: 20px;
+    
 }
 
 .responsibilities li {
