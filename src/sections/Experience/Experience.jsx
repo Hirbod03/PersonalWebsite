@@ -44,7 +44,7 @@ const experiences = [
     company: 'Golf 918 Systems', 
     responsibilities: [
       'Contributing to CI/CD pipeline development to streamline testing',
-      'Monitoring and maintaining pipelines, resolving build issues',
+      'Monitoring and maintaining playwright testing scripts',
       'Integrated testing frameworks to ensure software quality',
     ],
     typeOfEmployment: 'Volunteer',
@@ -65,8 +65,8 @@ const Experience = () => {
               <a href={experience.companyLink} target="_blank" rel="noopener noreferrer" className={styles.companyLink}>
                 {experience.company} 
               </a>
-              {/* <a> - {experience.typeOfEmployment}
-              </a> */}
+              <a> - {experience.typeOfEmployment}
+              </a>
             </p>
             <p className={styles.employmentDetails}>
               <span>{experience.employmentDuration}</span>
