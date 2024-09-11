@@ -78,6 +78,7 @@
 .description {
     align-self: center;
     max-width: 24ch;
+    font-size: 20px;
 }
 
 .info {

@@ -40,17 +40,17 @@ const experiences = [
   //   companyLink: 'https://www.websolutions.com',
   // },
   {
-    title: 'SQA Engineer 🧪',
-    company: 'Golf 918 Systems', 
-    responsibilities: [
-      'Contributing to CI/CD pipeline development to streamline testing',
-      'Monitoring and maintaining playwright testing scripts',
-      'Integrated testing frameworks to ensure software quality',
-    ],
-    typeOfEmployment: 'Volunteer',
-    employmentDuration: 'Sep 2024 - Present',
-    companyLink: 'https://www.linkedin.com/company/golf918/',
-  }
+  title: 'SQA Engineer 🧪',
+  company: 'Golf 918 Systems', 
+  responsibilities: [
+    'Developing automated testing workflows using Playwright and GitHub Actions',
+    'Creating and maintaining test cases & scripts for web applications',
+    'Integrated testing frameworks to ensure software quality',
+  ],
+  typeOfEmployment: 'Intern',
+  employmentDuration: 'Sep 2024 - Present',
+  companyLink: 'https://www.linkedin.com/company/golf918/',
+}
 ];
 
 const Experience = () => {
