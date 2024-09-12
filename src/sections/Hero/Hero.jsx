@@ -51,7 +51,7 @@ function Hero() {
                 </span>
                 <p className={styles.description}>
                 Full-Stack Developer skilled in React, Node, Java and SQL.<br/>
-                Seeking new challenges to leverage my skills alongside experienced professionals.
+                Always seeking new challenges to learn alongside experienced professionals.
                 </p>
                 <a href={CV} download>
                     <button className="hover">
