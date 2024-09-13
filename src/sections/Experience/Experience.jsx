@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './ExperienceStyles.module.css';
 
 const experiences = [
@@ -40,7 +39,7 @@ const experiences = [
   //   companyLink: 'https://www.websolutions.com',
   // },
   {
-  title: 'SQA Engineer 🧪',
+  title: 'Software Engineer 🤖',
   company: 'Golf 918 Systems', 
   responsibilities: [
     'Developing automated testing workflows using Playwright and GitHub Actions',
