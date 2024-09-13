@@ -37,7 +37,7 @@ function Hero() {
             </div> 
             <div className={styles.info}>
                 <h1>Hirbod<br/>Hosseini</h1>
-                <h2>Software Developer</h2>
+                <h2>Software Engineer</h2>
                 <span>
                     <a href="https://www.linkedin.com/in/hirbod03/" target="_blank">
                         <img src={linkedinIcon} alt="LinkedIn-Icon" />
