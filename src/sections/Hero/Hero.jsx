@@ -37,7 +37,7 @@ function Hero() {
             </div> 
             <div className={styles.info}>
                 <h1>Hirbod<br/>Hosseini</h1>
-                <h2>Software Engineer</h2>
+                <h2>Software Developer</h2>
                 <span>
                     <a href="https://www.linkedin.com/in/hirbod03/" target="_blank">
                         <img src={linkedinIcon} alt="LinkedIn-Icon" />
@@ -50,7 +50,7 @@ function Hero() {
                     </a> */}
                 </span>
                 <p className={styles.description}>
-                Full-Stack Developer skilled in React, Node, Java and SQL.<br/>
+                CS Student skilled in React, Node, Java and SQL.<br/>
                 Always seeking new challenges to learn alongside experienced professionals.
                 </p>
                 <a href={CV} download>
