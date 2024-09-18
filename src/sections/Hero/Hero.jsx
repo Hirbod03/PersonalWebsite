@@ -50,7 +50,7 @@ function Hero() {
                     </a> */}
                 </span>
                 <p className={styles.description}>
-                CS Student skilled in React, Node, Java and SQL.<br/>
+                CS Student skilled in React, Node, Java and SQL.
                 Always seeking new challenges to learn alongside experienced professionals.
                 </p>
                 <a href={CV} download>
