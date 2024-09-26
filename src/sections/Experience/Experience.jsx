@@ -14,32 +14,20 @@ const experiences = [
   //   companyLink: 'https://www.techcorp.com',
   // },
   // {
-  //   title: 'Intern 🌱',
-  //   company: 'Startup Inc',
+  //   title: 'Technical Consultant',
+  //   company: 'Oracle',
   //   responsibilities: [
   //     'Assisted in the development of a mobile app',
   //     'Conducted market research',
   //     'Participated in team meetings',
   //     'Presented project updates to stakeholders',
   //   ],
-  //   typeOfEmployment: 'Internship',
-  //   employmentDuration: 'Jun 2021 - Dec 2021',
-  //   companyLink: 'https://www.startupinc.com',
-  // },
-  // { 
-  //   title: 'Frontend Developer 🖼️',
-  //   company: 'Web Solutions',
-  //   responsibilities: [
-  //     'Developed user interfaces for web applications',
-  //     'Implemented responsive designs',
-  //     'Collaborated with designers to create visually appealing websites',
-  //   ],
   //   typeOfEmployment: 'Full-time',
-  //   employmentDuration: 'Mar 2020 - Dec 2021',
-  //   companyLink: 'https://www.websolutions.com',
+  //   employmentDuration: 'Jul 2025 - Present',
+  //   companyLink: 'https://www.netsuite.com/portal/aboutus.shtml',
   // },
   {
-  title: 'Software Engineer 🧑🏽‍💻',
+  title: 'Software Engineer',
   company: 'Golf 918 Systems', 
   responsibilities: [
     'Developing automated testing workflows using Playwright and GitHub Actions',

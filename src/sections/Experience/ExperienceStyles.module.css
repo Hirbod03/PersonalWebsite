@@ -91,9 +91,6 @@ a:hover {
 .companyLink {
     color: var(--link-color);
     font-weight: bold;
-}
-
-.companyLink:hover {
     color: #007bff;
 }
 
@@ -103,6 +100,14 @@ a:hover {
         flex-wrap: wrap;
         justify-content: space-evenly;
         max-width: fit-content;
+    }
+    .companyLink {
+        color: var(--link-color);
+        font-weight: bold;
+    }
+    
+    .companyLink:hover {
+        color: #007bff;
     }
     
 }
