@@ -35,7 +35,7 @@ const experiences = [
     'Integrated testing frameworks to ensure software quality',
   ],
   typeOfEmployment: 'Intern',
-  employmentDuration: 'Sep 2024 - Present',
+  employmentDuration: 'Sep 2024 - Dec 2024',
   companyLink: 'https://www.linkedin.com/company/golf918/',
 }
 ];

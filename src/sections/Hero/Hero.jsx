@@ -44,8 +44,9 @@ function Hero() {
                     </a>
                 </span>
                 <p className={styles.description}>
-                Experienced dev skilled in React, Node, Java and Playwright Testing.
-                Always seeking new challenges to learn alongside experienced professionals.
+                Software dev with professional experience.
+                <br></br>UWO alumni with a BSc in Computer Science.
+                <br></br>Big leafs fan.
                 </p>
                 <a href={CV} download>
                     <button className="hover">
