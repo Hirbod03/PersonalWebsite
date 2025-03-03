@@ -1,53 +1,85 @@
 .game {
     text-align: center;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
+    margin: 40px auto;
+    padding: 30px;
+    max-width: 320px;
+    border-radius: 20px;
+    background: var(--background-color);
+    box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
+    border: none;
+    transition: background 0.5s, box-shadow 0.5s;
+}
+
+[data-theme="dark"] .game {
+    background: #333;
+    box-shadow: 10px 10px 20px #222, -10px -10px 20px #444;
 }
 
 .board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-    margin: 10px 0;
+    gap: 10px;
+    margin: 20px 0;
 }
 
 .square {
-    width: 80px;
-    height: 80px;
-    font-size: 24px;
+    width: 90px;
+    height: 90px;
+    font-size: 28px;
     font-weight: bold;
-    background-color: #fff;
-    border: 2px solid #ccc;
+    background: var(--background-color);
+    border: none;
+    border-radius: 15px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+    transition: all 0.3s ease, background 0.5s;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .square {
+    background: #444;
+    box-shadow: 5px 5px 10px #222, -5px -5px 10px #555;
+    color: #fff;
 }
 
 .square:hover {
-    background-color: #f0f0f0;
+    background: #0987f2;
+    transform: scale(1.05);
+}
+
+.square:active {
+    box-shadow: inset 5px 5px 10px #d9d9d9, inset -5px -5px 10px #ffffff;
+    transform: scale(0.95);
 }
 
 .status {
-    margin: 10px 0;
-    font-size: 18px;
+    margin: 20px 0;
+    font-size: 20px;
     font-weight: bold;
+    color: var(--text-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .status {
+    color: #fff;
 }
 
 .resetButton {
-    margin-top: 10px;
-    padding: 10px 20px;
+    margin-top: 20px;
+    padding: 12px 24px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
-    background-color: #007bff;
-    color: white;
+    background: var(--btn-color);
+    color: var(--btn-text-color);
     border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+    transition: all 0.3s ease;
 }
 
-.resetButton:hover {
-    background-color: #0056b3;
+[data-theme="dark"] .resetButton {
+    background: #007bff;
+    color: #fff;
+    box-shadow: 5px 5px 10px #111, -5px -5px 10px #222;
 }
