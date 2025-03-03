@@ -44,9 +44,8 @@ function Hero() {
                     </a>
                 </span>
                 <p className={styles.description}>
-                Software dev with professional experience.
-                <br></br>UWO alumni with a BSc in Computer Science.
-                <br></br>Big leafs fan.
+                    Passionate software developer with professional experience.
+                    Eager to learn from a team of talented developers.
                 </p>
                 <a href={CV} download>
                     <button className="hover">
