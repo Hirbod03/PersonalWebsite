@@ -76,7 +76,7 @@
 .colorMode:hover {
     cursor: pointer;
     transform: rotate(360deg);
-    transition: transform 0.7 s ease-in-out;
+    transition: transform 0.7s ease-in-out;
 }
 
 .description {
