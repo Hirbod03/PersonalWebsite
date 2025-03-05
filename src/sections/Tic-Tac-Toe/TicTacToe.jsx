@@ -58,7 +58,7 @@ function TicTacToe() {
     const status = winner
         ? `Winner: ${winner} 🎉\n(Restarting in ${countdown}s)`
         : board.every((square) => square)
-        ? "Draw!\n(Restarting in 3s)"
+        ? "Draw!"
         : `Next player: ${isXNext ? "X" : "O"}`;
 
     return (
