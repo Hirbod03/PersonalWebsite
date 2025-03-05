@@ -11,10 +11,10 @@ function App() {
    return (
       <>
          <Hero />
-         <TicTacToe />
          <Experience />
          <Skills />
          <Projects />
+         <TicTacToe />
          <Contact />
          <BackToTopButton /> 
       </>
