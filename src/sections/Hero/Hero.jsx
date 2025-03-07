@@ -1,5 +1,7 @@
 import styles from './HeroStyles.module.css'
 import heroImg from '../../assets/hero-img.png'
+// eslint-disable-next-line no-unused-vars
+import img from '../../assets/img.png'
 import sun from '../../assets/sun.svg'
 import moon from '../../assets/moon.png'
 import linkedinIconLight from '../../assets/linkedin-light.svg'
