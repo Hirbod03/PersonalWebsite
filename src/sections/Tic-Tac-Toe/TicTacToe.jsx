@@ -6,7 +6,6 @@ import confetti from "canvas-confetti"; // Import confetti
 function TicTacToe() {
     const [board, setBoard] = useState(Array(9).fill(null));
     const [isXNext, setIsXNext] = useState(true);
-    const [countdown, setCountdown] = useState(null); // Countdown timer
 
     const calculateWinner = (squares) => {
         const lines = [
@@ -37,26 +36,16 @@ function TicTacToe() {
     useEffect(() => {
         if (winner) {
             confetti(); // Trigger confetti
-            setCountdown(3); // Start countdown
-            const timer = setInterval(() => {
-                setCountdown((prev) => (prev > 0 ? prev - 1 : 0));
-            }, 1000);
-
-            setTimeout(() => {
-                resetGame();
-                clearInterval(timer);
-            }, 3000);
         }
     }, [winner]);
 
     const resetGame = () => {
         setBoard(Array(9).fill(null));
         setIsXNext(true);
-        setCountdown(null); // Clear countdown
     };
 
     const status = winner
-        ? `Winner: ${winner} 🎉\n(Restarting in ${countdown}s)`
+        ? `Winner: ${winner} 🎉`
         : board.every((square) => square)
         ? "Draw!"
         : `Next player: ${isXNext ? "X" : "O"}`;
