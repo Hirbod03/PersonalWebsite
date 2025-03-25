@@ -1,31 +1,6 @@
 import styles from './ExperienceStyles.module.css';
 
 const experiences = [
-  // {
-  //   title: 'Software Developer 🧑🏽‍💻',
-  //   company: 'Tech Corp',
-  //   responsibilities: [
-  //     'Developed and maintained web applications',
-  //     'Collaborated with cross-functional teams',
-  //     'Improved system performance by 20%',
-  //   ],
-  //   typeOfEmployment: 'Full-time',
-  //   employmentDuration: 'Jan 2022 - Present',
-  //   companyLink: 'https://www.techcorp.com',
-  // },
-  // {
-  //   title: 'Technical Consultant',
-  //   company: 'Oracle',
-  //   responsibilities: [
-  //     'Assisted in the development of a mobile app',
-  //     'Conducted market research',
-  //     'Participated in team meetings',
-  //     'Presented project updates to stakeholders',
-  //   ],
-  //   typeOfEmployment: 'Full-time',
-  //   employmentDuration: 'Jul 2025 - Present',
-  //   companyLink: 'https://www.netsuite.com/portal/aboutus.shtml',
-  // },
   {
   title: 'Software Engineer',
   company: 'Golf 918 Systems', 
