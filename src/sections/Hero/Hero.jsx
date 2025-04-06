@@ -1,5 +1,5 @@
 import styles from './HeroStyles.module.css'
-import heroImg from '../../assets/hero-img.png'
+import heroImg from '../../assets/hero-anime.png'
 // eslint-disable-next-line no-unused-vars
 import img from '../../assets/img.png'
 import sun from '../../assets/sun.svg'
