@@ -1,38 +1,55 @@
+/* Styles for the back-to-top button */
 .back-to-top {
+    /* Initially hidden */
     opacity: 0;
     visibility: hidden;
+
+    /* Fixed position at bottom-right */
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 99; 
-    background-color: var(--btn-color); 
-    color: var(--btn-text-color); 
+    z-index: 99; /* Ensure it's above other elements */
+
+    /* Button appearance */
+    background-color: var(--btn-color); /* Uses CSS variable for background */
+    color: var(--btn-text-color); /* Uses CSS variable for text */
     border: none;
     border-radius: 20px;
     width: 40px;
     font-size: 20px;
     font-weight: bold; 
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    /* Smooth transitions for appearance changes */
     transition: opacity 0.5s, visibility 0.5s, background-color 0.5s, color 0.5s;
+
+    /* Button behavior */
     cursor: pointer;
     outline: none;
+
+    /* Center content inside the button */
     display: flex;
     align-items: center;
     justify-content: center; 
+
+    /* Adjust text alignment and spacing */
     line-height: 50px; 
     padding: 0; 
     margin: 0; 
 }
 
+/* Show the button when .show class is added */
 .back-to-top.show {
     opacity: 1;
     visibility: visible;
 }
 
+/* Slightly enlarge button on hover */
 .back-to-top:hover {
     transform: scale(1.05); 
 }
 
+/* Move button down and reduce shadow on click */
 .back-to-top:active {
     transform: translateY(2px);
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);

@@ -1,3 +1,4 @@
+/* Navbar fixed to top with blur and shadow */
 .navbar {
   position: fixed;
   top: 0;
@@ -9,11 +10,11 @@
   -webkit-backdrop-filter: blur(12px) saturate(180%);
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   padding: 18px 0;
-  /* No flex here, let the container handle layout */
+  transition: background 0.3s cubic-bezier(.4,0,.2,1);
 }
 
+/* Container centers navbar content and sets max width */
 .navbarContainer {
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
@@ -22,6 +23,7 @@
   align-items: center;
 }
 
+/* Navigation list styles */
 .navList {
   display: flex;
   gap: 40px;
@@ -32,6 +34,7 @@
   font-family: 'Rubik', 'Roboto Mono', monospace, sans-serif;
 }
 
+/* Navigation link styles */
 .navList a {
   color: var(--text-color, #222);
   text-decoration: none;
@@ -46,10 +49,7 @@
   outline: none;
 }
 
-html{
-  scroll-behavior: smooth;
-}
-
+/* Hover and focus effects for nav links */
 .navList a:hover,
 .navList a:focus {
   background: var(--btn-color, #0987f2);
@@ -58,11 +58,14 @@ html{
   text-decoration: none;
 }
 
-@media (max-width: 865px) {
-  .navbar,
-  .navbarContainer,
-  .navList,
-  .navList a {
+/* Enable smooth scrolling for anchor links */
+html{
+  scroll-behavior: smooth;
+}
+
+/* Hide navbar on small screens */
+@media (max-width: 799px) {
+  .navbar {
     display: none !important;
   }
 }

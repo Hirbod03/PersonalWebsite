@@ -12,21 +12,26 @@ import CV from '../../assets/cv.pdf'
 import { useTheme } from '../../common/ThemeContext.jsx'  
 
 function Hero() {
+    // Get current theme and toggle function from context
     const {theme, toggleTheme} = useTheme();
 
+    // Select icons based on current theme
     const themeIcon = theme === 'light' ? sun : moon
     const githubIcon = theme === 'light' ? githubIconLight : githubIconDark
     const linkedinIcon = theme === 'light' ? linkedinIconLight : linkedinIconDark
 
     return (
     <div className={`${styles.container} heroSection`}>
+        {/* Main hero section */}
         <section id = "hero" className={styles.container}>
             <div className={styles.colorModeContainer}>
+                {/* Profile image */}
                 <img 
                     className={styles.hero} 
                     src= {heroImg} 
                     alt="profile-image"
                 />
+                {/* Theme toggle icon */}
                 <img 
                     className = {styles.colorMode}
                     src ={themeIcon} 
@@ -35,8 +40,10 @@ function Hero() {
                 />
             </div> 
             <div className={styles.info}>
+                {/* Name and title */}
                 <h1>Hirbod<br/>Hosseini</h1>
                 <h2>Software Developer</h2>
+                {/* Social icons */}
                 <span>
                     <a href="https://www.linkedin.com/in/hirbod03/" target="_blank">
                         <img src={linkedinIcon} alt="LinkedIn-Icon" />
@@ -45,10 +52,12 @@ function Hero() {
                         <img src={githubIcon} alt="GitHub-Icon" />
                     </a>
                 </span>
+                {/* Short description */}
                 <p className={styles.description}>
                     Passionate software developer with professional experience.
                     Eager to learn from a team of talented developers.
                 </p>
+                {/* Resume download button */}
                 <a href={CV} download>
                     <button className="hover">
                         Resume

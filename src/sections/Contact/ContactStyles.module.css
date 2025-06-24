@@ -1,15 +1,18 @@
+/* Container styles for the contact section */
 .container {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
+/* Form layout: vertical stacking with spacing */
 form {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
+/* Shared styles for textarea and input fields (except submit button) */
 textarea,
 input:not([type='submit']) {
   height: 50px;
@@ -17,12 +20,14 @@ input:not([type='submit']) {
   width: 250px;
 }
 
+/* Specific styles for textarea */
 textarea {
   padding-top: 16px;
   resize: none;
   height: 250px;
 }
 
+/* Common input and textarea appearance */
 input,
 textarea {
   border-radius: 20px;
@@ -33,10 +38,12 @@ textarea {
   color: var(--form-text-color);
 }
 
+/* Placeholder text color */
 ::placeholder {
   color: var(--form-text-color);
 }
 
+/* Submit button styles */
 input[type='submit'] {
   background-color: var(--btn-color);
   color: var(--btn-text-color);
@@ -51,15 +58,18 @@ input[type='submit'] {
   margin: auto;
 }
 
+/* Submit button hover effect */
 input[type='submit']:hover {
   transform: scale(1.05);
 }
 
+/* Submit button active (pressed) effect */
 input[type='submit']:active {
   transform: translateY(2px);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 }
 
+/* Responsive styles for screens >= 800px */
 @media (width >= 800px) {
   textarea,
   input:not([type='submit']) {
@@ -71,6 +81,7 @@ input[type='submit']:active {
   }
 }
 
+/* Responsive styles for screens >= 1400px */
 @media (width >= 1400px) {
   textarea,
   input:not([type='submit']) {

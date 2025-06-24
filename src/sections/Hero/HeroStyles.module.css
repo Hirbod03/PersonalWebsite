@@ -1,3 +1,4 @@
+/* Main container for the hero section */
 .container {
     display: flex;
     flex-direction: column;
@@ -7,18 +8,23 @@
     min-height: 100dvh;
     padding: 0 15px;
 
+    /* Hero image or avatar styling */
     .hero {
         max-width: 200px;
         margin: 0 auto;
     }
 
+    /* Social links container */
     span {
         display: flex;
         gap: 25px;
         justify-content: center;
+
+        /* Social link anchor */
         a {
             margin: 0;
 
+            /* Social icon image */
             img {
                 width: 35px;
                 aspect-ratio: 1/1;
@@ -26,6 +32,7 @@
                 transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
             }
             
+            /* Hover effect for social icons */
             img:hover {
                 transform: scale(1.1);
                 opacity: 0.8;
@@ -33,11 +40,13 @@
         }
     }
 
+    /* General anchor styling */
     a {
         width: fit-content;
         align-self: center;
     }
 
+    /* Button styling */
     button {
         background-color: var(--btn-color);
         color: var(--btn-text-color);
@@ -51,67 +60,81 @@
         transition: background-color 0.5s, color 0.5s, box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
     }
 
+    /* Button hover effect */
     button:hover {
         transform: scale(1.05);
         background-color: black;
         color: white;
     }
 
+    /* Button active (pressed) effect */
     button:active {
         transform: translateY(2px);
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
     }
 }
 
+/* Container for color mode toggle */
 .colorModeContainer {
     position: relative;
 }
 
+/* Color mode icon styling */
 .colorMode {
     position: absolute;
     top: 5px;
     width: 25px;
 }
 
+/* Color mode icon hover effect */
 .colorMode:hover {
     cursor: pointer;
     transform: rotate(360deg);
     transition: transform 1s ease-in-out;
 }
 
+/* Description text styling */
 .description {
     align-self: center;
     max-width: 24ch;
     font-size: 16px;
 }
 
+/* Info section styling */
 .info {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+/* Responsive styles for screens >= 800px */
 @media (width >= 800px) {
     .container {
         flex-direction: row-reverse;
         align-items: center;
         justify-content: center;
         
+        /* Larger hero image */
         .hero {
             max-width: 350px;
             width: 350px;
         }
+        /* Larger description text */
         .description {
             font-size: 18px;
         }
     }
 }
+
+/* Responsive styles for screens >= 1400px */
 @media (width >= 1400px) { 
     .container{
+        /* Even larger hero image */
         .hero {
-        max-width: 400px;
-        width: 400px;
+            max-width: 400px;
+            width: 400px;
         }
+        /* Even larger description text */
         .description {
             font-size: 20px;
         }
