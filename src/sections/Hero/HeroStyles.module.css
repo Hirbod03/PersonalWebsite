@@ -5,7 +5,8 @@
     justify-content: center;
     text-align: center;
     gap: 20px;
-    min-height: 100dvh;
+    /* Full viewport height minus navbar */
+    min-height: calc(100dvh - 70px);
     padding: 0 15px;
 
     /* Hero image or avatar styling */
