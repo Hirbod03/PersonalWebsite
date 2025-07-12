@@ -51,25 +51,30 @@ function TicTacToe() {
         : `Next player: ${isXNext ? "X" : "O"}`;
 
     return (
-        <div className={styles.game}>
-            <h2>Tic-Tac-Toe</h2>
-            <div className={styles.status}>{status}</div>
-            <div className={styles.board}>
-                {board.map((value, index) => (
-                    <button
-                        key={index}
-                        className={`${styles.square} ${
-                            result?.winningLine?.includes(index) ? styles.winningSquare : ""
-                        }`}
-                        onClick={() => handleClick(index)}
-                    >
-                        {value}
-                    </button>
-                ))}
+        <div>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", minHeight: "200px", justifyContent: "center" }}>
+                <h1 className="sectionTitle">Game</h1>
             </div>
-            <button className={styles.resetButton} onClick={resetGame}>
-                Reset Game
-            </button>
+            <div className={styles.game} style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                <h2>Tic-Tac-Toe</h2>
+                <div className={styles.status}>{status}</div>
+                <div className={styles.board}>
+                    {board.map((value, index) => (
+                        <button
+                            key={index}
+                            className={`${styles.square} ${
+                                result?.winningLine?.includes(index) ? styles.winningSquare : ""
+                            }`}
+                            onClick={() => handleClick(index)}
+                        >
+                            {value}
+                        </button>
+                    ))}
+                </div>
+                <button className={styles.resetButton} onClick={resetGame}>
+                    Reset Game
+                </button>
+            </div>
         </div>
     );
 }

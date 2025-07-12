@@ -2,6 +2,18 @@ import styles from './ExperienceStyles.module.css';
 
 // Array of experience objects, each representing a job or internship
 const experiences = [
+  // {
+  //   title: 'Full-Stack Engineer',
+  //   company: 'DoNotPay', 
+  //   responsibilities: [
+  //     'Working on full stack development tasks with Node.js, Go, and React',
+  //     'Develop and integrate REST/GraphQL APIs for various features',
+  //     'PostgreSQL database design and optimization',
+  //   ],
+  //   typeOfEmployment: 'Intern',
+  //   employmentDuration: 'Since July, 2025',
+  //   companyLink: 'https://www.linkedin.com/company/donotpay/',
+  // },
   {
     title: 'Software Engineer',
     company: 'Golf 918 Systems', 
