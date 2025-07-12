@@ -18,8 +18,8 @@ const experiences = [
     title: 'Software Engineer',
     company: 'Golf 918 Systems', 
     responsibilities: [
-      'Developing automated testing workflows using Playwright and GitHub Actions',
-      'Creating and maintaining test cases & scripts for web applications',
+      'Developed an automated testing pipeline using Playwright and GitHub Actions',
+      'Wrote and maintained test scripts & user flows for web applications',
       'Integrated testing frameworks to ensure software quality',
     ],
     typeOfEmployment: 'Intern',
