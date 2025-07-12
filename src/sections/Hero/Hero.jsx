@@ -42,7 +42,7 @@ function Hero() {
             <div className={styles.info}>
                 {/* Name and title */}
                 <h1>Hirbod<br/>Hosseini</h1>
-                <h2>Software Developer</h2>
+                <h2>Software Engineer</h2>
                 {/* Social icons */}
                 <span>
                     <a href="https://www.linkedin.com/in/hirbod03/" target="_blank">
@@ -54,7 +54,7 @@ function Hero() {
                 </span>
                 {/* Short description */}
                 <p className={styles.description}>
-                    Passionate software developer with professional experience.
+                    Passionate engineer with professional experience.
                     Eager to learn from a team of talented developers.
                 </p>
                 {/* Resume download button */}
