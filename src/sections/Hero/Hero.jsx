@@ -42,20 +42,20 @@ function Hero() {
             <div className={styles.info}>
                 {/* Name and title */}
                 <h1>Hirbod<br/>Hosseini</h1>
-                <h2>Software Engineer</h2>
+                <h2>Software Developer</h2>
                 {/* Social icons */}
                 <span>
                     <a href="https://www.linkedin.com/in/hirbod03/" target="_blank">
                         <img src={linkedinIcon} alt="LinkedIn-Icon" />
                     </a>
                     <a href="https://github.com/Hirbod03" target="_blank">
-                        <img src={githubIcon} alt="GitHub-Icon" />
+                        <img src={githubIcon} alt="GitHub-Icon" />  
                     </a>
                 </span>
                 {/* Short description */}
                 <p className={styles.description}>
-                    Passionate engineer with professional experience.
-                    Eager to learn from a team of talented developers.
+                    Passionate software dev with professional experience.
+                    Eager to learn from a talented team.
                 </p>
                 {/* Resume download button */}
                 <a href={CV} download>
