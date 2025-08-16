@@ -2,18 +2,18 @@ import styles from './ExperienceStyles.module.css';
 
 // Array of experience objects, each representing a job or internship
 const experiences = [
-  // {
-  //   title: 'Full-Stack Engineer',
-  //   company: 'DoNotPay', 
-  //   responsibilities: [
-  //     'Working on full stack development tasks with Node.js, Go, and React',
-  //     'Develop and integrate REST/GraphQL APIs for various features',
-  //     'PostgreSQL database design and optimization',
-  //   ],
-  //   typeOfEmployment: 'Intern',
-  //   employmentDuration: 'Since July, 2025',
-  //   companyLink: 'https://www.linkedin.com/company/donotpay/',
-  // },
+  {
+    title: 'Web Developer',
+    company: 'Immensa Group',
+    responsibilities: [
+      'Designed and developed a responsive company website using React + Tailwind',
+      'Collaborated with stakeholder to define requirements and deliver features',
+      'Deployed the website and provided ongoing maintenance and support',
+    ],
+    typeOfEmployment: 'Freelance',
+    employmentDuration: 'June 2025 - Present',
+    companyLink: 'https://www.immensagroup.com/',
+  },
   {
     title: 'Software Engineer',
     company: 'Golf 918 Systems', 
