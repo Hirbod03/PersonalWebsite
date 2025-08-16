@@ -3,7 +3,7 @@ import styles from './ExperienceStyles.module.css';
 // Array of experience objects, each representing a job or internship
 const experiences = [
   {
-    title: 'Web Developer',
+    title: 'Front-End Developer',
     company: 'Immensa Group',
     responsibilities: [
       'Designed and developed a responsive company website using React + Tailwind',
@@ -15,7 +15,7 @@ const experiences = [
     companyLink: 'https://www.immensagroup.com/',
   },
   {
-    title: 'Software Engineer',
+    title: 'QA Automation Developer',
     company: 'Golf 918 Systems', 
     responsibilities: [
       'Developed an automated testing pipeline using Playwright and GitHub Actions',
