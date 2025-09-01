@@ -6,9 +6,9 @@ const experiences = [
     title: 'Frontend Developer',
     company: 'Immensa Group',
     responsibilities: [
-      'Designed and developed a responsive company website using React + Tailwind',
-      'Collaborated with stakeholder to define requirements and deliver features',
-      'Deployed the website and provided ongoing maintenance and support',
+      'Designed and developed a responsive website using React & Tailwind',
+      'Collaborated with stakeholders to align implementation with business goals.',
+      'Deployed website and provided ongoing maintenance and support',
     ],
     typeOfEmployment: 'Freelance',
     employmentDuration: 'June 2025 - Present',
