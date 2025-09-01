@@ -3,7 +3,7 @@ import styles from './ExperienceStyles.module.css';
 // Array of experience objects, each representing a job or internship
 const experiences = [
   {
-    title: 'Front-End Developer',
+    title: 'Frontend Developer',
     company: 'Immensa Group',
     responsibilities: [
       'Designed and developed a responsive company website using React + Tailwind',
