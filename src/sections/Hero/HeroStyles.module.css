@@ -8,6 +8,7 @@
     /* Full viewport height minus navbar */
     min-height: calc(100dvh - 70px);
     padding: 0 15px;
+    margin-bottom: 60px;
 
     /* Hero image or avatar styling */
     .hero {

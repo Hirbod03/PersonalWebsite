@@ -8,6 +8,7 @@
     box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
     border: none;
     transition: background 0.5s, box-shadow 0.5s;
+    margin-bottom: 60px;
 }
 
 [data-theme="dark"] .game {
