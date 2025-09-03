@@ -1,7 +1,7 @@
 import styles from './HeroStyles.module.css'
-import heroImg from '../../assets/hero-anime.png'
+// import heroImg from '../../assets/hero-anime.png'
 // eslint-disable-next-line no-unused-vars
-import img from '../../assets/img.png'
+import img from '../../assets/gd-md.png'
 import sun from '../../assets/sun.svg'
 import moon from '../../assets/moon.png'
 import linkedinIconLight from '../../assets/linkedin-light.svg'
@@ -28,7 +28,7 @@ function Hero() {
                 {/* Profile image */}
                 <img 
                     className={styles.hero} 
-                    src= {heroImg} 
+                    src= {img} 
                     alt="profile-image"
                 />
                 {/* Theme toggle icon */}
@@ -54,8 +54,7 @@ function Hero() {
                 </span>
                 {/* Short description */}
                 <p className={styles.description}>
-                    Passionate software dev with professional experience.
-                    Eager to learn from a talented team.
+                    I like building cool stuff with code while listening to music and drinking excessive amounts of coffee.
                 </p>
                 {/* Resume download button */}
                 <a href={CV} download>
