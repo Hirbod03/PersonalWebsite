@@ -7,10 +7,10 @@ const experiences = [
     company: 'Immensa Group',
     responsibilities: [
       'Designed and developed a responsive website using React & Tailwind',
-      'Collaborated with stakeholders to align implementation with business goals.',
+      'Collaborated with founder to align implementation with business goals.',
       'Deployed website and provided ongoing maintenance and support',
     ],
-    typeOfEmployment: 'Freelance',
+    typeOfEmployment: 'Contracter',
     employmentDuration: 'June 2025 - Present',
     companyLink: 'https://www.immensagroup.com/',
   },
@@ -24,7 +24,7 @@ const experiences = [
     ],
     typeOfEmployment: 'Intern',
     employmentDuration: 'Sep 2024 - Dec 2024',
-    companyLink: 'https://www.linkedin.com/company/golf918/',
+    companyLink: 'https://www.golf918.com/',
   }
 ];
 
