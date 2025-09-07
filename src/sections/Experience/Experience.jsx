@@ -16,7 +16,7 @@ const experiences = [
   },
   {
     title: 'QA Automation Developer',
-    company: 'Golf 918 Systems', 
+    company: 'Golf 918', 
     responsibilities: [
       'Developed an automated testing pipeline using Playwright and GitHub Actions',
       'Wrote and maintained test scripts & user flows for web applications',
