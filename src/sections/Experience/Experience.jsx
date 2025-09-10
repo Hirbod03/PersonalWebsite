@@ -15,7 +15,7 @@ const experiences = [
     companyLink: 'https://www.immensagroup.com/',
   },
   {
-    title: 'QA Automation Developer',
+    title: 'QA Developer',
     company: 'Golf 918', 
     responsibilities: [
       'Developed an automated testing pipeline using Playwright and GitHub Actions',
