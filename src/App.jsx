@@ -4,8 +4,7 @@ import './App.css'
 // Import section components
 import Navbar from './sections/navBar/navBar'
 import Hero from './sections/Hero/Hero'
-import Skills from './sections/Skills/Skills'
-import Projects from './sections/Projects/Projects'
+import Skills from './sections/Skills/Skills' 
 import Contact from './sections/Contact/Contact'
 import BackToTopButton from './sections/BackToTop/BackToTopButton'
 import Experience from './sections/Experience/Experience'
@@ -25,7 +24,6 @@ function App() {
             <div id="experience"><Experience /></div>
             {/* Skills section */}
             <div id="skills"><Skills /></div>
-            <div id="projects"><Projects /></div>
             {/* TicTacToe game section */}
             <div id="tictactoe"><TicTacToe /></div>
             {/* Contact section */}
