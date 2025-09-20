@@ -54,7 +54,7 @@ function Hero() {
                 </span>
                 {/* Short description */}
                 <p className={styles.description}>
-                    I like building cool stuff with code while listening to music and drinking excessive amounts of coffee.
+                    I like building cool stuff while listening to music and drinking excessive amounts of coffee.
                 </p>
                 {/* Resume download button */}
                 <a href={CV} download>
