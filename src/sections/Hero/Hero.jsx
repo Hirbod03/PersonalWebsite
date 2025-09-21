@@ -23,20 +23,25 @@ function Hero() {
     return (
     <div className={`${styles.container} heroSection`}>
         {/* Main hero section */}
-        <section id = "hero" className={styles.container}>
+        <section id="hero" className={styles.container} aria-label="Hero section">
             <div className={styles.colorModeContainer}>
                 {/* Profile image */}
                 <img 
                     className={styles.hero} 
-                    src= {img} 
-                    alt="profile-image"
+                    src={img} 
+                    alt="Profile image of Hirbod Hosseini"
+                    loading="lazy"
                 />
                 {/* Theme toggle icon */}
                 <img 
-                    className = {styles.colorMode}
-                    src ={themeIcon} 
-                    alt="light/dark-mode-selector"
+                    className={styles.colorMode}
+                    src={themeIcon} 
+                    alt={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
                     onClick={toggleTheme}
+                    role="button"
+                    aria-label="Toggle color mode"
+                    tabIndex={0}
+                    onKeyPress={e => { if (e.key === 'Enter') toggleTheme(); }}
                 />
             </div> 
             <div className={styles.info}>
@@ -45,11 +50,11 @@ function Hero() {
                 <h2>Software Developer</h2>
                 {/* Social icons */}
                 <span>
-                    <a href="https://www.linkedin.com/in/hirbod03/" target="_blank">
-                        <img src={linkedinIcon} alt="LinkedIn-Icon" />
+                    <a href="https://www.linkedin.com/in/hirbod03/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                        <img src={linkedinIcon} alt="LinkedIn icon" loading="lazy" />
                     </a>
-                    <a href="https://github.com/Hirbod03" target="_blank">
-                        <img src={githubIcon} alt="GitHub-Icon" />  
+                    <a href="https://github.com/Hirbod03" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                        <img src={githubIcon} alt="GitHub icon" loading="lazy" />  
                     </a>
                 </span>
                 {/* Short description */}
@@ -57,7 +62,7 @@ function Hero() {
                     I like building cool stuff while listening to music and drinking excessive amounts of coffee.
                 </p>
                 {/* Resume download button */}
-                <a href={CV} download>
+                <a href={CV} download aria-label="Download resume">
                     <button className="hover">
                         Resume
                     </button>

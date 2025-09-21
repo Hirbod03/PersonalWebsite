@@ -31,13 +31,13 @@ const experiences = [
 // Functional component to display experience section
 const Experience = () => {
   return (
-    <div id="experience" className={styles.container}>
+    <section id="experience" className={styles.container} aria-label="Experience section">
       {/* Section title */}
       <h1 className="sectionTitle">Experience</h1>
       <div className={styles.experienceList}>
         {/* Map through experiences and render each as a card */}
         {experiences.map((experience, index) => (
-          <div key={index} className={styles.experienceCard}>
+          <article key={index} className={styles.experienceCard} aria-label={`${experience.title} at ${experience.company}`}>
             {/* Job title */}
             <h3>{experience.title}</h3>
             <p>
@@ -47,13 +47,14 @@ const Experience = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.companyLink}
+                aria-label={`Visit ${experience.company} website`}
               >
                 {experience.company}
               </a>
               {/* Type of employment */}
-              <a className={styles.employmentDetails}>
+              <span className={styles.employmentDetails}>
                 &nbsp;- {experience.typeOfEmployment}
-              </a>
+              </span>
             </p>
             {/* Employment duration */}
             <p className={styles.employmentDetails}>
@@ -65,10 +66,10 @@ const Experience = () => {
                 <li key={idx}>{responsibility}</li>
               ))}
             </ul>
-          </div>
+              </article>
         ))}
       </div>
-    </div>
+        </section>
   );
 };
 

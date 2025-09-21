@@ -4,17 +4,17 @@ import styles from './navBarStyles.module.css';
 // Define the Navbar functional component
 const Navbar = () => (
   // Main navigation element with a CSS class for styling
-  <nav className={styles.navbar}>
+  <nav className={styles.navbar} role="navigation" aria-label="Main navigation">
     {/* Container div for navbar content */}
     <div className={styles.navbarContainer}>
       {/* Unordered list for navigation links */}
       <ul className={styles.navList}>
         {/* Navigation items linking to different sections of the page */}
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#tictactoe">Game</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#hero" tabIndex={0} aria-label="Home section">Home</a></li>
+        <li><a href="#experience" tabIndex={0} aria-label="Experience section">Experience</a></li>
+        <li><a href="#skills" tabIndex={0} aria-label="Skills section">Skills</a></li>
+        <li><a href="#tictactoe" tabIndex={0} aria-label="Game section">Game</a></li>
+        <li><a href="#contact" tabIndex={0} aria-label="Contact section">Contact</a></li>
       </ul>
     </div>
   </nav>

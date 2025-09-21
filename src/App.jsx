@@ -17,18 +17,18 @@ function App() {
          {/* Navigation bar at the top */}
          <Navbar />
          {/* Main content with top padding to avoid overlap with navbar */}
-         <div style={{ paddingTop: '70px' }}>
+         <main style={{ paddingTop: '70px', scrollBehavior: 'smooth' }} aria-label="Main content">
             {/* Hero section */}
-            <div id="hero"><Hero /></div>
+            <section id="hero" tabIndex={-1} aria-label="Hero section"><Hero /></section>
             {/* Experience section */}
-            <div id="experience"><Experience /></div>
+            <section id="experience" tabIndex={-1} aria-label="Experience section"><Experience /></section>
             {/* Skills section */}
-            <div id="skills"><Skills /></div>
+            <section id="skills" tabIndex={-1} aria-label="Skills section"><Skills /></section>
             {/* TicTacToe game section */}
-            <div id="tictactoe"><TicTacToe /></div>
+            <section id="tictactoe" tabIndex={-1} aria-label="Tic Tac Toe game"><TicTacToe /></section>
             {/* Contact section */}
-            <div id="contact"><Contact /></div>
-         </div>
+            <section id="contact" tabIndex={-1} aria-label="Contact section"><Contact /></section>
+         </main>
          {/* Back to top button */}
          <BackToTopButton /> 
       </>
