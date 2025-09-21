@@ -1,0 +1,14 @@
+.footer {
+  width: 100%;
+  padding: 40px 0 20px 0;
+  text-align: center;
+  background: var(--background-color);
+  color: var(--footer-text-color);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  border-top: 1px solid #eee;
+  margin-top: 60px;
+  transition: background-color 0.5s, color 0.5s;
+}
