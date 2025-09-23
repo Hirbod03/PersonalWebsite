@@ -1,12 +1,17 @@
 import styles from "./Footer.module.css";
+import messiGif from '../../assets/messi.gif';
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <span>
-        © 2024 Hirbod Hosseini.
-        <br />
-        All rights reserved. 
+        <img
+          src={messiGif}
+          alt="greiz gif"
+          style={{ width: '100px', height: '100px', objectFit: 'contain', pointerEvents: 'none', userSelect: 'none' }}
+          draggable={false}
+          onContextMenu={e => e.preventDefault()}
+        />
       </span>
       {/* <span>
         Web Dev Guide by {' '}
