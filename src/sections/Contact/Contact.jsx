@@ -24,16 +24,16 @@ function Contact() {
         </div>
         {/* Email input field */}
         <div className="formGroup">
-          <label htmlFor="email" hidden>
-            Email
-          </label>
-          <input
-            type="text"
-            name="email"
-            id="email"
-            placeholder="Email"
-            required
-          />
+            <label htmlFor="email" hidden>
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
         </div>
         {/* Message textarea field */}
         <div className="formGroup">
