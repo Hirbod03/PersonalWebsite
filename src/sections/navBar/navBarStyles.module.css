@@ -58,6 +58,12 @@
   text-decoration: none;
 }
 
+/* Remove outline from anchor target sections */
+section:target, .sectionTitle:target {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 /* Enable smooth scrolling for anchor links */
 html{
   scroll-behavior: smooth;
