@@ -10,11 +10,11 @@ const Navbar = () => (
       {/* Unordered list for navigation links */}
       <ul className={styles.navList}>
         {/* Navigation items linking to different sections of the page */}
-        <li><a href="#hero" tabIndex={0} aria-label="Home section">Home</a></li>
-        <li><a href="#experience" tabIndex={0} aria-label="Experience section">Experience</a></li>
-        <li><a href="#skills" tabIndex={0} aria-label="Skills section">Skills</a></li>
-        <li><a href="#tictactoe" tabIndex={0} aria-label="Game section">Game</a></li>
-        <li><a href="#contact" tabIndex={0} aria-label="Contact section">Contact</a></li>
+  <li><a href="#hero" aria-label="Home section">Home</a></li>
+  <li><a href="#experience" aria-label="Experience section">Experience</a></li>
+  <li><a href="#skills" aria-label="Skills section">Skills</a></li>
+  <li><a href="#tictactoe" aria-label="Game section">Game</a></li>
+  <li><a href="#contact" aria-label="Contact section">Contact</a></li>
       </ul>
     </div>
   </nav>
