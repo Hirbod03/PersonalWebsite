@@ -7,7 +7,7 @@ const experiences = [
     company: 'Immensa Group',
     responsibilities: [
       'Designed and developed a responsive website using React & Tailwind',
-      'Collaborated with founder to align implementation with business goals.',
+      'Collaborated with founder to align implementation with business goals',
       'Deployed website and provided ongoing maintenance and support',
     ],
     typeOfEmployment: 'Contractor',
