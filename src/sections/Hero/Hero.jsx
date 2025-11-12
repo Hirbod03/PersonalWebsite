@@ -5,9 +5,11 @@ import img from '../../assets/gd-md.png'
 import sun from '../../assets/sun.svg'
 import moon from '../../assets/moon.png'
 import linkedinIconLight from '../../assets/linkedin-light.svg'
-import githubIconDark from '../../assets/github-dark.svg'
 import linkedinIconDark from '../../assets/linkedin-dark.svg'
+import githubIconDark from '../../assets/github-dark.svg'
 import githubIconLight from '../../assets/github-light.svg' 
+import leetcodeIconLight from '../../assets/leetcode-light.png'
+import leetcodeIconDark from '../../assets/leetcode-dark.png'
 import CV from '../../assets/cv.pdf'
 import { useTheme } from '../../common/ThemeContext.jsx'  
 
@@ -19,6 +21,8 @@ function Hero() {
     const themeIcon = theme === 'light' ? sun : moon
     const githubIcon = theme === 'light' ? githubIconLight : githubIconDark
     const linkedinIcon = theme === 'light' ? linkedinIconLight : linkedinIconDark
+    const leetCodeButton = theme === 'light' ? leetcodeIconLight : leetcodeIconDark
+
 
     return (
     <div className={`${styles.container} heroSection`}>
@@ -56,10 +60,14 @@ function Hero() {
                     <a href="https://github.com/Hirbod03" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
                         <img src={githubIcon} alt="GitHub icon" loading="lazy" />  
                     </a>
+                    <a href="https://leetcode.com/u/Hirbod/" target="_blank" rel="noopener noreferrer" aria-label="Leetcode profile">
+                        <img src={leetCodeButton} alt="Leetcode icon" loading="lazy" />  
+                    </a>
+                    
                 </span>
                 {/* Short description */}
                 <p className={styles.description}>
-                    I like building cool stuff while listening to music and drinking excessive amounts of coffee.
+                    I design and build web applications with a focus on clean, maintainable code and strong user experience.
                 </p>
                 {/* Resume download button */}
                 <a href={CV} download aria-label="Download resume">
