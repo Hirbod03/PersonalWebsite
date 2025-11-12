@@ -8,8 +8,8 @@ import linkedinIconLight from '../../assets/linkedin-light.svg'
 import linkedinIconDark from '../../assets/linkedin-dark.svg'
 import githubIconDark from '../../assets/github-dark.svg'
 import githubIconLight from '../../assets/github-light.svg' 
-import leetcodeIconLight from '../../assets/leetcode-light.png'
-import leetcodeIconDark from '../../assets/leetcode-dark.png'
+// import leetcodeIconLight from '../../assets/leetcode-light.png'
+// import leetcodeIconDark from '../../assets/leetcode-dark.png'
 import CV from '../../assets/cv.pdf'
 import { useTheme } from '../../common/ThemeContext.jsx'  
 
@@ -21,7 +21,7 @@ function Hero() {
     const themeIcon = theme === 'light' ? sun : moon
     const githubIcon = theme === 'light' ? githubIconLight : githubIconDark
     const linkedinIcon = theme === 'light' ? linkedinIconLight : linkedinIconDark
-    const leetCodeButton = theme === 'light' ? leetcodeIconLight : leetcodeIconDark
+    // const leetCodeButton = theme === 'light' ? leetcodeIconLight : leetcodeIconDark
 
 
     return (
@@ -60,9 +60,9 @@ function Hero() {
                     <a href="https://github.com/Hirbod03" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
                         <img src={githubIcon} alt="GitHub icon" loading="lazy" />  
                     </a>
-                    <a href="https://leetcode.com/u/Hirbod/" target="_blank" rel="noopener noreferrer" aria-label="Leetcode profile">
+                    {/* <a href="https://leetcode.com/u/Hirbod/" target="_blank" rel="noopener noreferrer" aria-label="Leetcode profile">
                         <img src={leetCodeButton} alt="Leetcode icon" loading="lazy" />  
-                    </a>
+                    </a> */}
                     
                 </span>
                 {/* Short description */}
