@@ -13,14 +13,13 @@ export default function Footer() {
           onContextMenu={e => e.preventDefault()}
         />
       </span>
-      {/* spacer of ~50px */}
-      <div style={{ height: '20px' }} />
+      {/* <div style={{ height: '20px' }} />
       <span>
         Foundation based on a guide by{' '}
         <a href="https://www.youtube.com/@howtobecomeadeveloper" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline', fontWeight: 400 }}>
           howtobecomeadeveloper
         </a>
-      </span>
+      </span> */}
     </footer>
   );
 }
