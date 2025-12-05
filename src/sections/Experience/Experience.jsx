@@ -10,8 +10,8 @@ const experiences = [
       'Collaborated with founder to align implementation with business goals',
       'Deployed website and provided ongoing maintenance and support',
     ],
-    typeOfEmployment: 'Contractor',
-    employmentDuration: 'June 2025 - Present',
+    typeOfEmployment: 'Freelance',
+    employmentDuration: 'June 2025 - Aug 2025',
     companyLink: 'https://www.immensagroup.com/',
   },
   {
