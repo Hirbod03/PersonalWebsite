@@ -75,7 +75,10 @@ function TicTacToe() {
                 <h2>Tic-Tac-Toe</h2>
                 <div className={styles.status}>{status}</div>
                 <div className={styles.board}>
-                    {board.map((value, index) => (
+                    {board.map((value, index) => {
+                        const row = Math.floor(index / 3) + 1;
+                        const col = (index % 3) + 1;
+                        return (
                         // Each square is a button that shows its value and handles clicks
                         <button
                             key={index}
@@ -84,10 +87,11 @@ function TicTacToe() {
                                 result?.winningLine?.includes(index) ? styles.winningSquare : ""
                             }`}
                             onClick={() => handleClick(index)}
+                            aria-label={value ? `${value} in row ${row}, column ${col}` : `Empty square, row ${row}, column ${col}`}
                         >
                             {value}
                         </button>
-                    ))}
+                    )})})
                 </div>
                 <button className={styles.resetButton} onClick={resetGame}>
                     Reset Game
