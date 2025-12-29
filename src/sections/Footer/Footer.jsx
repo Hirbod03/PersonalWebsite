@@ -10,6 +10,8 @@ export default function Footer() {
           alt="greiz gif"
           style={{ width: '100px', height: '100px', objectFit: 'contain', pointerEvents: 'none', userSelect: 'none' }}
           draggable={false}
+          loading="lazy"
+          decoding="async"
           onContextMenu={e => e.preventDefault()}
         />
       </span>

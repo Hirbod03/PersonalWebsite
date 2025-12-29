@@ -3,7 +3,7 @@
 export default [
   {
     // Image filename (should be in assets folder served by backend)
-    src: 'TODO.png',
+    src: 'TODO.webp',
     // Link to project repo or page
     link: 'https://github.com/Hirbod03/HeroSurfer',
     // Project title
@@ -12,31 +12,31 @@ export default [
     p: 'Chrome Extension'
   },
   {
-    src: 'insta.png',
+    src: 'insta.webp',
     link: 'https://github.com/Hirbod03/AutoInstaUnfollow',
     h3: 'AutoInstaUnfollow',
     p: 'Instagram Tool'
   },
   {
-    src: 'db.png',
+    src: 'db.webp',
     link: 'https://github.com/Hirbod03/TAMDB',
     h3: 'TA Manager',
     p: 'SQL Database'
   },
   {
-    src: 'ms.png',
+    src: 'ms.webp',
     link: 'https://github.com/Hirbod03/MyMinesweeper',
     h3: 'Minesweeper',
     p: 'Classic Game'
   },
   {
-    src: 'ta.png',
+    src: 'ta.webp',
     link: 'https://github.com/Hirbod03/Projects/tree/main/Python/Tweet%20Sentiment%20Analysis',
     h3: 'Sentiment Analysis',
     p: 'Tweet analysis'
   },
   {
-    src: 'more.png',
+    src: 'more.webp',
     link: 'https://github.com/Hirbod03',
     h3: 'Looking for more?',
     p: 'Visit my GitHub!'

@@ -6,7 +6,7 @@ function ProjectCard({src, link, h3, p}) {
     // Anchor tag wraps the entire card, opens link in new tab
     <a href={link} target="_blank" rel="noopener noreferrer">
       {/* Project image */}
-      <img className="hover" src={src} alt="" />
+      <img className="hover" src={src} alt="" loading="lazy" decoding="async" />
       {/* Project title */}
       <h3>{h3}</h3>
       {/* Project description */}

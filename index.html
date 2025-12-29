@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="public/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- SEO Meta Tags -->
     <meta name="description" content="Hirbod's personal website. Software developer portfolio, projects, and contact information." />
@@ -13,17 +13,21 @@
     <meta property="og:description" content="Explore Hirbod's portfolio, projects, and experience as a software developer." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hirbod.site" />
-    <meta property="og:image" content="/public/assets/hero-img.png" />
+    <meta property="og:image" content="/assets/hero.png" />
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Hirbod | Software Developer" />
     <meta name="twitter:description" content="Explore Hirbod's portfolio, projects, and experience as a software developer." />
-    <meta name="twitter:image" content="/public/assets/hero-img.png" />
+    <meta name="twitter:image" content="/assets/hero.png" />
     <!-- Theme Color -->
     <meta name="theme-color" content="#22223b" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&family=Rubik:wght@800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&family=Rubik:wght@800&display=swap" onload="this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&family=Rubik:wght@800&display=swap">
+    </noscript>
+    <link rel="preload" as="image" href="/assets/hero.webp" type="image/webp" fetchpriority="high" />
     <title>Hirbod | Software Developer</title> 
   </head>
   <body>

@@ -1,15 +1,22 @@
+import { Suspense, lazy } from 'react'
 // Import global styles
 import './App.css'
 
-// Import section components
+// Eager components (above-the-fold)
 import Navbar from './sections/navBar/navBar'
 import Hero from './sections/Hero/Hero'
-import Skills from './sections/Skills/Skills' 
-import Contact from './sections/Contact/Contact'
-import BackToTopButton from './sections/BackToTop/BackToTopButton'
-import Experience from './sections/Experience/Experience'
-import TicTacToe from './sections/Tic-Tac-Toe/TicTacToe'
-import Footer from './sections/Footer/Footer'
+
+// Lazy-load below-the-fold components to shorten critical path
+const Experience = lazy(() => import('./sections/Experience/Experience'))
+const Skills = lazy(() => import('./sections/Skills/Skills'))
+const TicTacToe = lazy(() => import('./sections/Tic-Tac-Toe/TicTacToe'))
+const Contact = lazy(() => import('./sections/Contact/Contact'))
+const BackToTopButton = lazy(() => import('./sections/BackToTop/BackToTopButton'))
+const Footer = lazy(() => import('./sections/Footer/Footer'))
+
+const SectionPlaceholder = ({ minHeight }) => (
+   <div style={{ minHeight, width: '100%' }} aria-hidden="true" />
+)
 
 // Main App component
 function App() {
@@ -22,18 +29,38 @@ function App() {
             {/* Hero section */}
             <section id="hero" tabIndex={-1} aria-label="Hero section"><Hero /></section>
             {/* Experience section */}
-            <section id="experience" tabIndex={-1} aria-label="Experience section"><Experience /></section>
+                  <section id="experience" tabIndex={-1} aria-label="Experience section">
+                     <Suspense fallback={<SectionPlaceholder minHeight="520px" />}>
+                        <Experience />
+                     </Suspense>
+                  </section>
             {/* Skills section */}
-            <section id="skills" tabIndex={-1} aria-label="Skills section"><Skills /></section>
+                  <section id="skills" tabIndex={-1} aria-label="Skills section">
+                     <Suspense fallback={<SectionPlaceholder minHeight="320px" />}>
+                        <Skills />
+                     </Suspense>
+                  </section>
             {/* TicTacToe game section */}
-            <section id="tictactoe" tabIndex={-1} aria-label="Tic Tac Toe game"><TicTacToe /></section>
+                  <section id="tictactoe" tabIndex={-1} aria-label="Tic Tac Toe game">
+                     <Suspense fallback={<SectionPlaceholder minHeight="360px" />}>
+                        <TicTacToe />
+                     </Suspense>
+                  </section>
             {/* Contact section */}
-            <section id="contact" tabIndex={-1} aria-label="Contact section"><Contact /></section>
+                  <section id="contact" tabIndex={-1} aria-label="Contact section">
+                     <Suspense fallback={<SectionPlaceholder minHeight="480px" />}>
+                        <Contact />
+                     </Suspense>
+                  </section>
          </main>
          {/* Back to top button */}
-         <BackToTopButton /> 
-         {/* Simple footer for spacing */}
-         <Footer />
+             <Suspense fallback={null}>
+                <BackToTopButton /> 
+             </Suspense>
+             {/* Simple footer for spacing */}
+             <Suspense fallback={null}>
+                <Footer />
+             </Suspense>
       </>
    )
 }

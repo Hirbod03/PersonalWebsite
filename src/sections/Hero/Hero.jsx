@@ -1,7 +1,5 @@
 import styles from './HeroStyles.module.css'
 // import heroImg from '../../assets/hero-anime.png'
-// eslint-disable-next-line no-unused-vars
-import img from '../../assets/gd-md.png'
 import sun from '../../assets/sun.svg'
 import moon from '../../assets/moon.png'
 import linkedinIconLight from '../../assets/linkedin-light.svg'
@@ -30,12 +28,20 @@ function Hero() {
         <section id="hero" className={styles.container} aria-label="Hero section">
             <div className={styles.colorModeContainer}>
                 {/* Profile image */}
-                <img 
-                    className={styles.hero} 
-                    src={img} 
-                    alt="Profile image of Hirbod Hosseini"
-                    loading="lazy"
-                />
+                <picture>
+                    <source srcSet="/assets/hero.webp" type="image/webp" />
+                    <source srcSet="/assets/hero.png" type="image/png" />
+                    <img 
+                        className={styles.hero} 
+                        src="/assets/hero.png"
+                        alt="Profile image of Hirbod Hosseini"
+                        fetchPriority="high"
+                        decoding="async"
+                        loading="eager"
+                        width="400"
+                        height="400"
+                    />
+                </picture>
                 {/* Theme toggle icon */}
                 <img 
                     className={styles.colorMode}
