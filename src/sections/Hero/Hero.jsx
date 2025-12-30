@@ -38,8 +38,6 @@ function Hero() {
                         fetchPriority="high"
                         decoding="async"
                         loading="eager"
-                        width="400"
-                        height="400"
                     />
                 </picture>
                 {/* Theme toggle icon */}
