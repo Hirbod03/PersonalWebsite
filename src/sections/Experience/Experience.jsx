@@ -11,7 +11,7 @@ const experiences = [
       'Deployed website and provided ongoing maintenance and support',
     ],
     typeOfEmployment: 'Freelance',
-    employmentDuration: 'June 2025 - Present',
+    employmentDuration: 'June 2025 - Dec 2025',
     companyLink: 'https://www.immensagroup.com/',
   },
   {
