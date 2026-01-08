@@ -57,10 +57,6 @@ function App() {
              <Suspense fallback={null}>
                 <BackToTopButton /> 
              </Suspense>
-             {/* Simple footer for spacing */}
-             <Suspense fallback={null}>
-                <Footer />
-             </Suspense>
       </>
    )
 }
