@@ -91,7 +91,7 @@ function TicTacToe() {
                         >
                             {value}
                         </button>
-                    )})})
+                    )})}
                 </div>
                 <button className={styles.resetButton} onClick={resetGame}>
                     Reset Game
