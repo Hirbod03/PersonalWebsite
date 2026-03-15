@@ -327,7 +327,286 @@ const PitchViz = () => {
           if (this.selectedPitches.length > 1) {
             pitchEl.style.background = `${this.colors[index % this.colors.length]}15`
           }
+
+          // Add pitch markings to the first pitch
+          if (index === 0) {
+            this.renderPitchMarkings(pitchEl, pitch, width, height)
+          }
         })
+      }
+
+      createPitchMarkingsSVG(pitch, pixelWidth, pixelHeight) {
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+        svg.setAttribute('class', 'pitch-markings')
+        svg.setAttribute('width', pixelWidth)
+        svg.setAttribute('height', pixelHeight)
+        svg.setAttribute('viewBox', `0 0 ${pitch.length} ${pitch.width}`)
+        svg.style.position = 'absolute'
+        svg.style.top = '0'
+        svg.style.left = '0'
+        svg.style.pointerEvents = 'none'
+        svg.setAttribute('preserveAspectRatio', 'none')
+
+        const lineColor = this.getMarkingColor()
+        const lineWidth = 0.15
+
+        // Helper to create SVG lines
+        const createLine = (x1, y1, x2, y2) => {
+          const line = document.createElementNS('http://www.w3.org/2000/svg', 'line')
+          line.setAttribute('x1', x1)
+          line.setAttribute('y1', y1)
+          line.setAttribute('x2', x2)
+          line.setAttribute('y2', y2)
+          line.setAttribute('stroke', lineColor)
+          line.setAttribute('stroke-width', lineWidth)
+          return line
+        }
+
+        // Helper to create SVG circles
+        const createCircle = (cx, cy, r) => {
+          const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
+          circle.setAttribute('cx', cx)
+          circle.setAttribute('cy', cy)
+          circle.setAttribute('r', r)
+          circle.setAttribute('stroke', lineColor)
+          circle.setAttribute('stroke-width', lineWidth)
+          circle.setAttribute('fill', 'none')
+          return circle
+        }
+
+        // Center line
+        svg.appendChild(createLine(pitch.length / 2, 0, pitch.length / 2, pitch.width))
+
+        // Center circle
+        svg.appendChild(createCircle(pitch.length / 2, pitch.width / 2, 9.15))
+
+        // Center spot
+        const spot = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
+        spot.setAttribute('cx', pitch.length / 2)
+        spot.setAttribute('cy', pitch.width / 2)
+        spot.setAttribute('r', 0.3)
+        spot.setAttribute('fill', lineColor)
+        svg.appendChild(spot)
+
+        // Penalty areas
+        const penaltyLength = 16.5
+        const penaltyWidth = 40.32
+
+        // Left penalty area
+        svg.appendChild(createLine(penaltyLength, (pitch.width - penaltyWidth) / 2, penaltyLength, (pitch.width + penaltyWidth) / 2))
+        svg.appendChild(createLine(penaltyLength, (pitch.width - penaltyWidth) / 2, 0, (pitch.width - penaltyWidth) / 2))
+        svg.appendChild(createLine(penaltyLength, (pitch.width + penaltyWidth) / 2, 0, (pitch.width + penaltyWidth) / 2))
+
+        // Right penalty area
+        svg.appendChild(createLine(pitch.length - penaltyLength, (pitch.width - penaltyWidth) / 2, pitch.length - penaltyLength, (pitch.width + penaltyWidth) / 2))
+        svg.appendChild(createLine(pitch.length - penaltyLength, (pitch.width - penaltyWidth) / 2, pitch.length, (pitch.width - penaltyWidth) / 2))
+        svg.appendChild(createLine(pitch.length - penaltyLength, (pitch.width + penaltyWidth) / 2, pitch.length, (pitch.width + penaltyWidth) / 2))
+
+        // Goal areas
+        const goalLength = 5.5
+        const goalWidth = 18.32
+
+        // Left goal area
+        svg.appendChild(createLine(goalLength, (pitch.width - goalWidth) / 2, goalLength, (pitch.width + goalWidth) / 2))
+        svg.appendChild(createLine(goalLength, (pitch.width - goalWidth) / 2, 0, (pitch.width - goalWidth) / 2))
+        svg.appendChild(createLine(goalLength, (pitch.width + goalWidth) / 2, 0, (pitch.width + goalWidth) / 2))
+
+        // Right goal area
+        svg.appendChild(createLine(pitch.length - goalLength, (pitch.width - goalWidth) / 2, pitch.length - goalLength, (pitch.width + goalWidth) / 2))
+        svg.appendChild(createLine(pitch.length - goalLength, (pitch.width - goalWidth) / 2, pitch.length, (pitch.width - goalWidth) / 2))
+        svg.appendChild(createLine(pitch.length - goalLength, (pitch.width + goalWidth) / 2, pitch.length, (pitch.width + goalWidth) / 2))
+
+        // Corner arcs (1 meter radius)
+        const cornerRadius = 1
+        const corners = [
+          { x: 0, y: 0 },
+          { x: pitch.length, y: 0 },
+          { x: 0, y: pitch.width },
+          { x: pitch.length, y: pitch.width }
+        ]
+
+        corners.forEach((corner) => {
+          svg.appendChild(createCircle(corner.x, corner.y, cornerRadius))
+        })
+
+        // Penalty kick spots
+        const penaltySpotDist = 11
+        const spotSize = 0.25
+
+        // Left penalty spot
+        const leftSpot = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
+        leftSpot.setAttribute('cx', penaltySpotDist)
+        leftSpot.setAttribute('cy', pitch.width / 2)
+        leftSpot.setAttribute('r', spotSize)
+        leftSpot.setAttribute('fill', lineColor)
+        svg.appendChild(leftSpot)
+
+        // Right penalty spot
+        const rightSpot = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
+        rightSpot.setAttribute('cx', pitch.length - penaltySpotDist)
+        rightSpot.setAttribute('cy', pitch.width / 2)
+        rightSpot.setAttribute('r', spotSize)
+        rightSpot.setAttribute('fill', lineColor)
+        svg.appendChild(rightSpot)
+
+        return svg
+      }
+
+      getMarkingColor() {
+        return this.currentTheme === 'dark' ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)'
+      }
+
+      renderPitchMarkings(pitchEl, pitch, pixelWidth, pixelHeight) {
+        // Remove existing markings
+        const existingMarkings = pitchEl.querySelector('.pitch-markings')
+        if (existingMarkings) {
+          existingMarkings.remove()
+        }
+
+        const svg = this.createPitchMarkingsSVG(pitch, pixelWidth, pixelHeight)
+        pitchEl.appendChild(svg)
+      }
+
+      createFootballerSVG(height, width) {
+        const footballerHeight = height * this.scale.pixelsPerMeter
+        const footballerWidth = width * this.scale.pixelsPerMeter
+
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+        svg.setAttribute('class', 'footballer')
+        svg.setAttribute('viewBox', '0 0 20 60')
+        svg.style.width = `${footballerWidth}px`
+        svg.style.height = `${footballerHeight}px`
+        svg.style.position = 'absolute'
+        svg.setAttribute('preserveAspectRatio', 'xMidYMid meet')
+
+        const playerColor = 'currentColor'
+
+        // Head
+        const head = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
+        head.setAttribute('cx', 10)
+        head.setAttribute('cy', 8)
+        head.setAttribute('r', 5)
+        head.setAttribute('fill', playerColor)
+        head.setAttribute('opacity', '0.8')
+        svg.appendChild(head)
+
+        // Body
+        const body = document.createElementNS('http://www.w3.org/2000/svg', 'rect')
+        body.setAttribute('x', 8)
+        body.setAttribute('y', 14)
+        body.setAttribute('width', 4)
+        body.setAttribute('height', 16)
+        body.setAttribute('fill', playerColor)
+        body.setAttribute('opacity', '0.9')
+        svg.appendChild(body)
+
+        // Left arm
+        const leftArm = document.createElementNS('http://www.w3.org/2000/svg', 'line')
+        leftArm.setAttribute('x1', 8)
+        leftArm.setAttribute('y1', 16)
+        leftArm.setAttribute('x2', 3)
+        leftArm.setAttribute('y2', 24)
+        leftArm.setAttribute('stroke', playerColor)
+        leftArm.setAttribute('stroke-width', 1.5)
+        leftArm.setAttribute('opacity', '0.8')
+        svg.appendChild(leftArm)
+
+        // Right arm
+        const rightArm = document.createElementNS('http://www.w3.org/2000/svg', 'line')
+        rightArm.setAttribute('x1', 12)
+        rightArm.setAttribute('y1', 16)
+        rightArm.setAttribute('x2', 17)
+        rightArm.setAttribute('y2', 24)
+        rightArm.setAttribute('stroke', playerColor)
+        rightArm.setAttribute('stroke-width', 1.5)
+        rightArm.setAttribute('opacity', '0.8')
+        svg.appendChild(rightArm)
+
+        // Left leg
+        const leftLeg = document.createElementNS('http://www.w3.org/2000/svg', 'line')
+        leftLeg.setAttribute('x1', 9)
+        leftLeg.setAttribute('y1', 30)
+        leftLeg.setAttribute('x2', 7)
+        leftLeg.setAttribute('y2', 50)
+        leftLeg.setAttribute('stroke', playerColor)
+        leftLeg.setAttribute('stroke-width', 2)
+        leftLeg.setAttribute('opacity', '0.9')
+        svg.appendChild(leftLeg)
+
+        // Right leg
+        const rightLeg = document.createElementNS('http://www.w3.org/2000/svg', 'line')
+        rightLeg.setAttribute('x1', 11)
+        rightLeg.setAttribute('y1', 30)
+        rightLeg.setAttribute('x2', 13)
+        rightLeg.setAttribute('y2', 50)
+        rightLeg.setAttribute('stroke', playerColor)
+        rightLeg.setAttribute('stroke-width', 2)
+        rightLeg.setAttribute('opacity', '0.9')
+        svg.appendChild(rightLeg)
+
+        // Left foot
+        const leftFoot = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
+        leftFoot.setAttribute('cx', 7)
+        leftFoot.setAttribute('cy', 52)
+        leftFoot.setAttribute('r', 1.2)
+        leftFoot.setAttribute('fill', playerColor)
+        svg.appendChild(leftFoot)
+
+        // Right foot
+        const rightFoot = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
+        rightFoot.setAttribute('cx', 13)
+        rightFoot.setAttribute('cy', 52)
+        rightFoot.setAttribute('r', 1.2)
+        rightFoot.setAttribute('fill', playerColor)
+        svg.appendChild(rightFoot)
+
+        return svg
+      }
+
+      renderFootballer(pitchEl, pitch, pixelWidth, pixelHeight) {
+        // Remove existing footballer
+        const existingFootballer = pitchEl.querySelector('.footballer')
+        if (existingFootballer) {
+          existingFootballer.remove()
+        }
+
+        const footballerSVG = this.createFootballerSVG(this.footballerHeight, this.footballerWidth)
+        footballerSVG.style.left = `${pixelWidth * 0.15}px`
+        footballerSVG.style.top = `${pixelHeight * 0.4}px`
+        footballerSVG.style.color = this.colors[0]
+        footballerSVG.style.zIndex = '5'
+        footballerSVG.classList.toggle('footballer-highlighted', this.highlightFootballer)
+
+        pitchEl.appendChild(footballerSVG)
+
+        // Add label with dimensions
+        this.addFootballerLabel(pitchEl)
+      }
+
+      addFootballerLabel(pitchEl) {
+        // Remove existing label
+        const existingLabel = pitchEl.querySelector('.footballer-label')
+        if (existingLabel) {
+          existingLabel.remove()
+        }
+
+        const label = document.createElement('div')
+        label.className = 'footballer-label'
+        label.style.position = 'absolute'
+        label.style.bottom = '10px'
+        label.style.left = '10px'
+        label.style.backgroundColor = this.currentTheme === 'dark' ? 'rgba(0, 0, 0, 0.6)' : 'rgba(255, 255, 255, 0.6)'
+        label.style.color = this.colors[0]
+        label.style.padding = '8px 12px'
+        label.style.borderRadius = '6px'
+        label.style.fontSize = '12px'
+        label.style.fontWeight = '500'
+        label.style.backdropFilter = 'blur(10px)'
+        label.style.border = `1px solid ${this.colors[0]}40`
+        label.textContent = `Footballer: ${this.footballerHeight.toFixed(2)}m × ${this.footballerWidth.toFixed(2)}m`
+        label.style.zIndex = '6'
+
+        pitchEl.appendChild(label)
       }
 
       renderLegend() {
@@ -497,11 +776,11 @@ const PitchViz = () => {
             </span>
           </div>
           <div className="controls-section">
-            <div class="theme-toggle">
-                <button class="theme-btn" id="themeToggle">
-                    <span class="icon dark-icon">🌙</span>
-                    <span class="icon light-icon">☀️</span>
-                    <span class="theme-text"></span>
+            <div className="theme-toggle">
+                <button className="theme-btn" id="themeToggle">
+                    <span className="icon dark-icon">🌙</span>
+                    <span className="icon light-icon">☀️</span>
+                    <span className="theme-text"></span>
                 </button>
             </div>
             <a
